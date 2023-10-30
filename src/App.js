@@ -40,7 +40,7 @@ function App() {
     <div>
       <Header logo={logo}/>
       <InvestForm submitHandler={calculateHandler}/>
-      {showTable && ( (yearlyData.length>0)? <ResultTable data={yearlyData}/> : <div className='center'>No Data Available!</div>)}
+      {showTable && ( (yearlyData.length>0)? <ResultTable data={yearlyData}/> : <div style={{textAlign:'center'}} >No Data Available!</div>)}
 
     </div>
   );

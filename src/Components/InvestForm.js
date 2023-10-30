@@ -1,12 +1,13 @@
 import React from 'react';
+import classes from './InvestForm.module.css';
 const InvestForm=(props)=>{
     const resetHandler=()=>{
         console.log("reset");
     }
     return(
         <div>
-        <form className="form" onSubmit={props.submitHandler}>
-            <div className="input-group">
+        <form className={classes.form} onSubmit={props.submitHandler}>
+            <div className={classes['input-group']}>
             <p>
                 <label htmlFor="current-savings">Current Savings ($)</label>
                 <input type="number" id="current-savings" />
@@ -16,7 +17,7 @@ const InvestForm=(props)=>{
                 <input type="number" id="yearly-contribution" />
             </p>
             </div>
-            <div className="input-group">
+            <div className={classes['input-group']}>
             <p>
                 <label htmlFor="expected-return">
                 Expected Interest (%, per year)
@@ -28,11 +29,11 @@ const InvestForm=(props)=>{
                 <input type="number" id="duration" />
             </p>
             </div>
-            <p className="actions">
-            <button onClick={resetHandler} type="reset" className="buttonAlt">
+            <p className={classes.actions}>
+            <button onClick={resetHandler} type="reset" className={classes.buttonAlt}>
                 Reset
             </button>
-            <button type="submit" className="button">
+            <button type="submit" className={classes.button}>
                 Calculate
             </button>
             </p>
