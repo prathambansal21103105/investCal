@@ -13,7 +13,7 @@ const ResultTable=(props)=>{
             </thead>
             <tbody>
                 {props.data.map((dataEntry)=>(
-                    <ResultTableBody tableData={dataEntry}/>
+                    <ResultTableBody key={dataEntry.year} tableData={dataEntry}/>
                 ))}
             </tbody>
         </table>
